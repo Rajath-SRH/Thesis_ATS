@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ATS - Using Neural Networks</title>
+  </head>
+  <body>
+    <h1>ATS - Using Neural Networks</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="JD" multiple></p>
+      <p><input type="file" name="CV" multiple></p>
+      <label for="models">Choose a model:</label>
+
+      <select name="models" id="models">
+        <option value="mpnet">mpnet</option>
+        <option value="distilrobert">distilrobert</option>
+        <option value="albert">albert</option>
+        <option value="tinybert">tinybert</option>
+      </select> 
+    <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <ul>
+    {% for item in score %}
+      <li>{{ item }} </li>
+    {% endfor %}
+    </ul>
+    
+
+  </body>
+</html>
